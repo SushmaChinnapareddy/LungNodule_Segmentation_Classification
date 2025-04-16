@@ -1,6 +1,6 @@
-Lung Nodule Segmentation Using UNet and Ensemble-Based Classification
+# Lung Nodule Segmentation Using UNet and Ensemble-Based Classification
 
-Overview
+## Overview
 
 This project uses deep learning to detect and classify lung nodules from CT scan images. It involves two major stages:
 
@@ -9,9 +9,9 @@ This project uses deep learning to detect and classify lung nodules from CT scan
 
 The system aims to assist radiologists in early lung cancer diagnosis by improving accuracy and reducing false positives.
 
-Dataset
+## Dataset
 
-Dataset Used: LIDC-IDRI (Lung Image Database Consortium and Image Database Resource Initiative)  (Kaggle 2D Slices)
+**Dataset Used:** LIDC-IDRI (Lung Image Database Consortium and Image Database Resource Initiative) (Kaggle 2D Slices)
 
 - Total Patients: 1,018  
 - Contains annotated CT scans with nodule masks  
@@ -21,21 +21,21 @@ Dataset Used: LIDC-IDRI (Lung Image Database Consortium and Image Database Resou
   - Normalized pixel values  
   - Threshold-based labeling using mask pixel sum
 
-Methodology
+## Methodology
 
-Segmentation:
+**Segmentation:**
 - Architecture: UNet++  
 - Encoder: MobileNetV2 (pretrained on ImageNet)  
 - Loss Function: Binary Cross Entropy + Dice Loss  
 - Activation: Sigmoid (output)
 
-Classification:
+**Classification:**
 - Models: VGG16 + InceptionV3 (ensemble)  
 - Frozen Layers: 25% of each model  
 - Fusion: Concatenation of feature vectors  
 - Final Layer: Fully connected layer with sigmoid activation
 
-Implementation Details
+## Implementation Details
 
 - Language: Python  
 - Libraries: TensorFlow, Keras, NumPy, OpenCV, Matplotlib  
@@ -44,13 +44,13 @@ Implementation Details
 - Optimization: Adam optimizer  
 - Techniques used: Early stopping and dropout layers to prevent overfitting
 
-Results
+## Results
 
-Segmentation Performance:
+**Segmentation Performance:**
 - Dice Coefficient: 0.7516  
 - IoU Score: 0.6181
 
-Classification Performance:
+**Classification Performance:**
 - Accuracy: 87.93%  
 - Precision: 88.39%  
 - Recall: 86.14%  
