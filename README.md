@@ -11,8 +11,7 @@ The system aims to assist radiologists in early lung cancer diagnosis by improvi
 
 Dataset
 
-Dataset Used: LIDC-IDRI (Lung Image Database Consortium and Image Database Resource Initiative)  
-Link: https://wiki.cancerimagingarchive.net/display/Public/LIDC-IDRI
+Dataset Used: LIDC-IDRI (Lung Image Database Consortium and Image Database Resource Initiative)  (Kaggle 2D Slices)
 
 - Total Patients: 1,018  
 - Contains annotated CT scans with nodule masks  
